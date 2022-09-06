@@ -1,0 +1,66 @@
+@use '../../../global.scss';
+
+.color-white{
+    color: white;
+}
+.fondo-login-card{
+    background-color: rgb(5, 129, 212);
+}
+
+ion-card {
+    
+    background-color: rgb(0, 77, 128);
+    margin: 0 auto;
+    top: 5vh;
+    height: 90vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .imagen_login {
+        width: 40%;
+    }
+    ion-card-title {
+        font-size: x-large;
+        font-style: italic;
+    }
+    ion-card-header {
+        ion-card-subtitle {
+            text-align: center;
+            font-style: italic;
+            bottom: 45px;
+
+        }
+
+
+    }
+
+    ion-item {
+        background-color: rgb(5, 129, 212);
+        --background: none;
+        bottom: 45px;
+
+        ion-label {
+            font-size: large;
+            font-weight: bold;
+        }
+    }
+    .centrar{
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .fondo {
+        ion-card {
+            width: 80vw;
+        }
+    }
+}

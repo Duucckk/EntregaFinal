@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="fondo">
+    <ion-card>
+      <ion-card-title class="color-white"><h1>Recuperar Pass</h1></ion-card-title>
+      <img src="../../../assets/img/user-black.png" alt="imagen_login" class="imagen_login"/>
+
+      <ion-card-header>
+        
+        <ion-card-subtitle class="color-white"><h5>Ingresa tus datos para recibir un email con la recuperación de tu contraseña!</h5></ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input type="text" placeholder="Ingresar Mail" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-button class="centrar" (click)="alerta()">RECUPERAR CONTRASEÑA</ion-button>
+      </ion-card-content>
+      <a routerLink='/registrar'>¿No tienes cuenta?</a>
+      <a routerLink='/recuperar-pass'>¿Olvidaste tu contraseña?</a>
+
+    </ion-card>
+  </div>
+</ion-content>
+
+<!-- 
+<ion-content>
+  <div class="fondo">
+    <ion-card>
+      <ion-card-title class="letraNegra">DuoCirijillo</ion-card-title>
+      <img src="../../../assets/img/user.png" alt="imagen_login" class="imagen_login"/>
+      <ion-card-header>
+        <ion-card-subtitle class="letraNegra">Iniciar Sesión</ion-card-subtitle>
+        
+      </ion-card-header>
+      <ion-card-content>
+        
+        <ion-item>
+          <ion-label class="letraNegra">Usuario:</ion-label>
+          <ion-input type="text" placeholder="Ingrese usuario" [(ngModel)]="user"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="letraNegra">Contraseña:</ion-label>
+          <ion-input type="password" placeholder="Ingrese contraseña" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-button (click)="login()">INGRESAR</ion-button>
+      </ion-card-content>
+      <a routerLink='/registrar'>Ir a registrar...</a>
+    </ion-card>
+  </div>
+</ion-content>
+-->

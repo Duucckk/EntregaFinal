@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">registrar</ion-title>
+    <ion-button slot="end" routerLink="/login">
+      <ion-icon name="log-in-outline"></ion-icon>
+      Volver a login
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="alumno" (ngSubmit)="registrar()">
+    <ion-item>
+      <ion-label position="stacked">Correo electronico</ion-label>
+      <ion-input type="text" placeholder="Ingrese Correo" formControlName="email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Rut</ion-label>
+      <ion-input type="text" placeholder="Ingrese Rut" formControlName="rut"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombre Completo</ion-label>
+      <ion-input type="text" placeholder="Ingrese Nombre" formControlName="nom_completo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha nacimiento</ion-label>
+      <ion-input type="date" placeholder="Ingrese Fecha Nacimiento" formControlName="fecha_nac"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Semestre</ion-label>
+      <ion-input type="number" placeholder="Ingrese Semestre" formControlName="semestre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese Contraseña" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Repita Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese Nuevamente Contraseña" [(ngModel)]="verificar_password" [ngModelOptions]="{standalone: 'true'}"></ion-input>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!alumno.valid">REGISTRAR</ion-button>
+  </form>
+
+  <!-- <h1>LISTA DE USUARIOS</h1>
+  <ion-list *ngFor="let usuario of usuarios">
+    <p>{{usuario.rut}} - {{usuario.nom_completo}} - {{usuario.fecha_nac}} - {{usuario.semestre}}</p>
+  </ion-list> -->
+
+</ion-content>
+<ion-content>
+
+  <form [formGroup]="profesor" (ngSubmit)="registrar()">
+    <ion-item>
+      <ion-label position="stacked">Correo electronico</ion-label>
+      <ion-input type="text" placeholder="Ingrese Correo" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Rut</ion-label>
+      <ion-input type="text" placeholder="Ingrese Rut" formControlName="rut"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombre Completo</ion-label>
+      <ion-input type="text" placeholder="Ingrese Nombre" formControlName="nom_completo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha nacimiento</ion-label>
+      <ion-input type="date" placeholder="Ingrese Fecha Nacimiento" formControlName="fecha_nac"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Semestre</ion-label>
+      <ion-input type="number" placeholder="Ingrese Semestre" formControlName="semestre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese Contraseña" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Repita Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese Nuevamente Contraseña" [(ngModel)]="verificar_password" [ngModelOptions]="{standalone: 'true'}"></ion-input>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!alumno.valid">REGISTRAR</ion-button>
+  </form>
+
+  <!-- <h1>LISTA DE USUARIOS</h1>
+  <ion-list *ngFor="let usuario of usuarios">
+    <p>{{usuario.rut}} - {{usuario.nom_completo}} - {{usuario.fecha_nac}} - {{usuario.semestre}}</p>
+  </ion-list> -->
+
+</ion-content>
+
